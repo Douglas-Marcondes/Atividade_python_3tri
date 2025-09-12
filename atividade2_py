@@ -1,0 +1,13 @@
+numeros = []
+
+for i in range(10):
+    num = int(input(f"Digite o {i+1}º número: "))
+    numeros.append(num)
+
+print("\nLista original:", numeros)
+
+ordenada = sorted(numeros)
+print("Lista ordenada crescente:", ordenada)
+
+sem_repetidos = list(set(numeros))
+print("Lista sem repetidos:", sem_repetidos)
