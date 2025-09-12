@@ -1,0 +1,17 @@
+from collections import Counter
+
+texto = input("Digite um texto: ")
+
+palavras = texto.split()
+
+quantidade_palavras = len(palavras)
+
+palavra_mais_longa = max(palavras, key=len)
+
+contador = Counter(palavras)
+
+palavra_mais_frequente, frequencia = contador.most_common(1)[0]
+
+print(f"Quantidade de palavras: {quantidade_palavras}")
+print(f"Palavra mais longa: {palavra_mais_longa}")
+print(f"Palavra que mais aparece: {palavra_mais_frequente} (aparece {frequencia} vezes)")
