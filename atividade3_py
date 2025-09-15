@@ -1,2 +1,13 @@
-A atividade 3 eu optei por não fazer.
-- Era a atividade que tinha que gerar a senha aleatória com o nome no meio.
+import random
+import string
+
+nome = input("Digite seu nome: ")
+
+caracteres = string.ascii_letters + string.digits + string.punctuation
+
+antes = ''.join(random.choice(caracteres) for _ in range(6))
+depois = ''.join(random.choice(caracteres) for _ in range(20 - len(nome) - 6))
+
+senha = antes + nome + depois
+
+print("Senha gerada:", senha)
